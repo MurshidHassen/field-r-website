@@ -14,16 +14,28 @@ export default class FieldRNavbar extends React.Component {
               src={fieldr}
               width="100"
               height="60"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top nav-rcorners2"
             />{" "}
           </Navbar.Brand>
           <Nav className="mr-auto topnav-right">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#aboutus">About us</Nav.Link>
-            <Nav.Link href="#ourteam">Our Team</Nav.Link>
-            <Nav.Link href="#services">Services</Nav.Link>
-            <Nav.Link href="#careers">Careers</Nav.Link>
-            <Nav.Link href="#contactus">Contact Us</Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#home">
+              Home
+            </Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#aboutus">
+              About us
+            </Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#ourteam">
+              Our Team
+            </Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#services">
+              Services
+            </Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#careers">
+              Careers
+            </Nav.Link>
+            <Nav.Link className="nav-rcorners2" href="#contactus">
+              Contact Us
+            </Nav.Link>
           </Nav>
         </Navbar>
       </React.Fragment>
