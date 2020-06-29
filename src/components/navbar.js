@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import fieldr from "../images/FieldR.png";
 
-export class FieldRNavbar extends React.Component {
+export default class FieldRNavbar extends React.Component {
   render() {
     return (
       <React.Fragment>
