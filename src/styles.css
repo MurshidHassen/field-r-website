@@ -47,3 +47,34 @@
   width: 200px;
   height: 250px; 
 }
+
+#rcorners4Services{
+  border-radius: 15px;
+  background: #fcfcfc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  padding: 20px; 
+  width: 400px;
+  height: 250px;
+}
+
+#rcorners4ServicesImg{
+  border-radius: 15px 50px 30px;
+  background: #e0e0e0;
+  padding: 20px; 
+  width: 340px;
+  height: 190px;
+}
+
+
+#rcorners4Journey{
+  border-radius: 15px;
+  background: #fcfcfc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  padding: 20px; 
+  width: 400px;
+  height: 400px;
+}
