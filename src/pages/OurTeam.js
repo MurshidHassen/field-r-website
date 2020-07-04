@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 export default class OurTeam extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <FieldRNavbar />
                 <h1 style={{ color: "#25CCF7", fontSize: 50 }}><b>OUR TEAM</b></h1>
                 <h3 style={{ color: "#25CCF7" }}><b>CO - FOUNDERS</b></h3>
@@ -94,7 +94,7 @@ export default class OurTeam extends Component {
                             </p>
                     </Row>
                 </Container>
-            </div>
+            </React.Fragment>
         )
     }
 }

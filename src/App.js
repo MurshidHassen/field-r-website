@@ -5,6 +5,7 @@ import { AboutUs } from "./pages/AboutUs";
 import OurTeam from "./pages/OurTeam";
 import Services from "./pages/Services";
 import OurJourney from "./pages/OurJourney";
+import ContactUs from "./pages/ContactUs";
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       {/* <AboutUs/> */}
       {/* <OurTeam/> */}
       {/* <Services/> */}
-      <OurJourney/>
+      {/* <OurJourney/> */}
+      <ContactUs/>      
     </div>
   );
 }
