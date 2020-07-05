@@ -11,7 +11,7 @@ export default class OurJourney extends Component {
             <Container>
             <Row >
                     <Col>
-                        <p id="rcorners4Journey"><img id="rcorners4ServicesImg" alt="description of image"/>
+                        <p id="rcorners4Journey"><img id="rcorners4ServicesImg" alt="First App"/>
                             <Container>
                                 <Row>
                                     <Col>
@@ -24,7 +24,7 @@ export default class OurJourney extends Component {
                         </p>
                     </Col>
                     <Col>
-                        <p id="rcorners4Journey"><img id="rcorners4ServicesImg" alt="description of image" />
+                        <p id="rcorners4Journey"><img id="rcorners4ServicesImg" alt="Second App" />
                             <Container>
                                 <Row>
                                     <Col>
