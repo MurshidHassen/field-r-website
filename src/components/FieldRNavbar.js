@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import fieldr from "../images/FieldR.png";
-import {Container, Row, Col} from "react-bootstrap";
+import {Row, Col} from "react-bootstrap";
 
 export default class FieldRNavbar extends React.Component {
   render() {

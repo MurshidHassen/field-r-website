@@ -11,7 +11,7 @@ export default class Services extends Component {
                 <Container>
                 <Row >
                         <Col>
-                            <p id="rcorners4Services"><img id="rcorners4ServicesImg" />
+                            <p id="rcorners4Services"><img id="rcorners4ServicesImg" alt="description of image" />
                                 <Container>
                                     <Row>
                                         <Col>
@@ -22,7 +22,7 @@ export default class Services extends Component {
                             </p>
                         </Col>
                         <Col>
-                            <p id="rcorners4Services"><img id="rcorners4ServicesImg" />
+                            <p id="rcorners4Services"><img id="rcorners4ServicesImg" alt="description of image" />
                                 <Container>
                                     <Row>
                                         <Col>
