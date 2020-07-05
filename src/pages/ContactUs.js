@@ -12,56 +12,58 @@ export default class ContactUs extends Component {
                 <Container >
                     <Row >
                         <div id="rcornersForm">
-                            <p style={{ color: "#25CCF7", fontSize: 24 }}><b>FOR DEMO</b></p>
-                            <form style={{ textAlign: "center" }} id="rcornersFormInside">
+                            <p style={{ color: "#25CCF7", fontSize: "24px", fontWeight: "bolder"}}><b>FOR DEMO</b></p>
+                            <form style={{ }} id="rcornersFormInside">
                                 <Row>
                                     <Col>
-                                        <label>Club/School Name:</label>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold", height: "90%"}}>Club/School Name:</label>
+                                    </Col>
+                                    <Col></Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <input></input>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Division: </label>
+                                    </Col>
+                                    <Col xs="10"></Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col md="5">
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Name of Coach:</label>
+                                    </Col>
+                               </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col md="5">
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>District Name:</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <label>Division: </label>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
+                                    </Col>
+                                </Row>
+                                <Row> 
+                                    <Col md="6">
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}><b>Contact number:</b></label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <input></input>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <label>Name of Coach:</label>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <input></input>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <label>District Name:</label>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <input></input>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <label>Contact number:</label>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <input></input>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -72,7 +74,7 @@ export default class ContactUs extends Component {
                                 </Row>
                                 <Row>
                                     <Col >
-                                        <Button style={{ width: "90%" }} title="Submit" size="lg" disabled>   Submit    </Button>
+                                        <Button style={{ width: "60%", borderRadius: "25px" }} title="Submit" size="lg" disabled>   Submit    </Button>
                                     </Col>
                                 </Row>
                             </form>
@@ -84,42 +86,46 @@ export default class ContactUs extends Component {
                             <form style={{ textAlign: "center" }} id="rcornersFormInside">
                                 <Row>
                                     <Col>
-                                        <label>Name of the Investor:</label>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Name of the Investor:</label>
+                                    </Col>
+                                    <Col xs="4"></Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <input></input>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Belonging Institution:</label>
+                                    </Col>
+                                    <Col xs="4"></Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <label>Belonging Institution:</label>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Contact Number:</label>
+                                    </Col>
+                                    <Col xs="4"></Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <input style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <input></input>
+                                        <label style={{color: "#25CCF7", fontSize: "1rem" , fontWeight: "bold"}}>Required Information:</label>
                                     </Col>
+                                    <Col xs="4"></Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <label>Contact Number:</label>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <input></input>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <label>Required Information:</label>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <textarea></textarea>
+                                        <textarea style={{ width: "90%", borderRadius: "16px", borderColor: "#25CCF7"}}></textarea>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -130,7 +136,7 @@ export default class ContactUs extends Component {
                                 </Row>
                                 <Row>
                                     <Col >
-                                        <Button style={{ width: "90%" }} title="Submit" size="lg" disabled>   Submit    </Button>
+                                        <Button style={{ width: "60%", borderRadius: "25px" }} title="Submit" size="lg" disabled>   Submit    </Button>
                                     </Col>
                                 </Row>                            </form>
                         </div>
