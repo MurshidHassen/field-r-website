@@ -17,7 +17,7 @@ export default class OurTeam extends Component {
                 <Container>
                     <Row >
                         <Col>
-                            <p id="rcorners4"><img id="rcorners2" src={Thariq} alt="Thariq of image" />
+                            <p id="rcorners4"><img id="rcorners2" src={Thariq} alt="Thariq" />
                                 <Container>
                                     <Row>
                                         <Col>
@@ -33,7 +33,7 @@ export default class OurTeam extends Component {
                             </p>
                         </Col>
                         <Col>
-                            <p id="rcorners4"><img id="rcorners2"  src={Azhar} alt="Azhar of image"/>
+                            <p id="rcorners4"><img id="rcorners2"  src={Azhar} alt="Azhar"/>
                                 <Container>
                                     <Row>
                                         <Col>
@@ -49,7 +49,7 @@ export default class OurTeam extends Component {
                             </p>
                         </Col>
                         <Col>
-                            <p id="rcorners4"><img id="rcorners2" src={Christina} alt="Christina of image" />
+                            <p id="rcorners4"><img id="rcorners2" src={Christina} alt="Christina" />
                                 <Container>
                                     <Row>
                                         <Col>
@@ -65,7 +65,7 @@ export default class OurTeam extends Component {
                             </p>
                         </Col>
                         <Col>
-                            <p id="rcorners4"><img id="rcorners2" src={Nasif} alt="Nasif of image" />
+                            <p id="rcorners4"><img id="rcorners2" src={Nasif} alt="Nasif" />
                                 <Container>
                                     <Row>
                                         <Col>
@@ -83,7 +83,7 @@ export default class OurTeam extends Component {
                     </Row>
                     <h3 style={{ color: "#25CCF7" }}><b>ADVISOR</b></h3>
                     <Row  className="justify-content-md-center">
-                            <p id="rcorners4"><img id="rcorners2" src={Tharaka}  alt="Tharaka of image"/>
+                            <p id="rcorners4"><img id="rcorners2" src={Tharaka}  alt="Tharaka"/>
                                 <Container>
                                     <Row>
                                         <Col>

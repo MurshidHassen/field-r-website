@@ -8,7 +8,7 @@ export class AboutUs extends Component {
             <React.Fragment>
                 <FieldRNavbar></FieldRNavbar>
                     <h1 style={{ color: "#25CCF7" }}><b>ABOUT US</b></h1>
-                    <p style={{paddingLeft: "20px", paddingRight: "20px"}}><img src={FieldR} alt="Field R " style={{ float: "left" }} className="img-about" /><h3 style={{ textAlign: "justify", fontSize: 26 }}>FieldR is a recent startup in the field of
+                    <p style={{paddingLeft: "20px", paddingRight: "20px"}}><img src={FieldR} alt="FieldR" style={{ float: "left" }} className="img-about" /><h3 style={{ textAlign: "justify", fontSize: 26 }}>FieldR is a recent startup in the field of
                     technology in sports. It holds a place amongst
                     one of the analyzing tools implemented to
                     revolutionize the field of cricket. This cricket
