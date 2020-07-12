@@ -65,15 +65,15 @@ body, html {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
   padding: 20px; 
   width: 200px;
-  height: 240px; 
+  height: 250px; 
 }
 
 #rcorners4Services{
   border-radius: 15px;
   background: #fcfcfc;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
   padding: 20px; 
   width: 400px;
   height: 250px;
@@ -104,9 +104,9 @@ body, html {
 #rcornersForm {
   border-radius: 15px;
   background: #fcfcfc;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
   padding: 20px; 
   width: 450px;
   height: 550px; 
@@ -115,10 +115,10 @@ body, html {
 
 #rcornersFormInside {
   border-radius: 15px 50px 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  background: #fcfcfc;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/
+  background: #fcfcfc; 
   padding: 20px; 
   width: 400px;
   height: 450px; 

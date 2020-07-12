@@ -35,7 +35,7 @@ export default class Services extends Component {
                     </Row> */}
                     <Row className="justify-content-md-center">
                         <Col>
-                            <Card id="rcorners4Services"><img id="rcorners4ServicesImg" alt="Service 2" />
+                            <Card id="rcorners4Services" style={{ boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)", transition: "0.3s"}}><img id="rcorners4ServicesImg" alt="Service 2" />
                                 <Container>
                                     <Row>
                                         <Col>

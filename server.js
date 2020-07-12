@@ -1,12 +1,109 @@
 var express = require('express');
-var app = express();
-var path = require("path");
+var router = express.Router();
+var nodemailer = require('nodemailer');
+var cors = require('cors');
+const creds = require('./config');
+
+// var transport = {
+//     host: 'smtp.example.com', // Don’t forget to replace with the SMTP host of your provider
+//     port: 587,
+//     auth: {
+//     user: creds.USER,
+//     pass: creds.PASS
+//   }
+// }
+
+// var transport = nodemailer.createTransport({
+//     host: "smtp.mailtrap.io",
+//     port: 2525,
+//     ssl: false,
+//     tls: false,
+//     auth: {
+//         user: "d988d68f7a419d",
+//         pass: "f54cf8641fc202"
+//     }
+// });
+
+var transport = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 25,
+    auth: {
+      user: "139eb1e51b1bec",
+      pass: "7bed62b9521610"
+    }
+});
 
 
-//setting middleware
-app.use(express.static(__dirname + 'build')); //Serves resources from public folder
+var transporter = nodemailer.createTransport(transport)
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-  });
-var server = app.listen(5000);
+transporter.verify((error, success) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log(success)
+        console.log('Server is ready to take messages');
+    }
+});
+
+router.post('/demo', (req, res, next) => {
+    var name = req.body.name
+    var email = req.body.email
+    var message = req.body.schoolClubName
+    console.log(message)
+    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+
+    var mail = {
+        from: "murshid.hassen@gmail.com",
+        to: "murshid.hassen@gmail.com",  // Change to email address that you want to receive messages on
+        subject: 'New Message from Contact Form',
+        text: content
+    }
+
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+            console.log("Error in transporter ", err)
+            res.json({
+                status: 'fail'
+            })
+        } else {
+            res.json({
+                status: 'success'
+            })
+        }
+    })
+})
+
+
+router.post('/investment', (req, res, next) => {
+    var name = req.body.name
+    var email = req.body.email
+    var message = req.body.message
+    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+
+    var mail = {
+        from: name,
+        to: 'RECEIVING_EMAIL_ADDRESS_GOES_HERE',  // Change to email address that you want to receive messages on
+        subject: 'New Message from Contact Form',
+        text: content
+    }
+
+    transporter.sendMail(mail, (err, data) => {
+        if (err) {
+            res.json({
+                status: 'fail'
+            })
+        } else {
+            res.json({
+                status: 'success'
+            })
+        }
+    })
+})
+
+
+
+const app = express()
+app.use(cors())
+app.use(express.json())
+app.use('/', router)
+app.listen(3002)
