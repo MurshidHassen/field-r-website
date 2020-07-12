@@ -1,7 +1,9 @@
+"use strict";
+
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer');
-var cors = require('cors');
+const nodemailer = require("nodemailer");
+const cors = require("cors");
 const creds = require('./config');
 
 // var transport = {
@@ -25,109 +27,158 @@ const creds = require('./config');
 // });
 
 const app = express()
-const path = require('path')
+const path = require('path');
+const { isEmptyBindingElement } = require('typescript');
 const PORT = process.env.PORT || 5000
 
-var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
-    // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
-    }
-};
+ // async..await is not allowed in global scope, must use a wrapper
+ async function demo(schoolClubName, division, nameoftheCoach,contactNumber,districtName) {
+    // Generate test SMTP service account from ethereal.email
+    // Only needed if you don't have a real mail account for testing
+    let testAccount = await nodemailer.createTestAccount();
+  
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: "projectvimo@gmail.com", // generated ethereal user
+        pass: "", // generated ethereal password
+      },
+    });
+  
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: '"Field R 👻" <projectvimo@gmail.com>', // sender address
+      to: "projectvimo@gmail.com, murshid.hassen@gmail.com", // list of receivers
+      subject: "For Demo Request", // Subject line
+      text: `${schoolClubName + division + nameoftheCoach + contactNumber + districtName}`, // plain text body
+      html: `<b>Demo Request ${schoolClubName + division + nameoftheCoach + contactNumber + districtName} </b>`, // html body
+    });
+  
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+}
+  
+async function investor(nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation) {
+    // Generate test SMTP service account from ethereal.email
+    // Only needed if you don't have a real mail account for testing
+    let testAccount = await nodemailer.createTestAccount();
+  
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: "projectvimo@gmail.com", // generated ethereal user
+        pass: "", // generated ethereal password
+      },
+    });
+  
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
+      from: '"Field R 👻" <projectvimo@gmail.com>', // sender address
+      to: "projectvimo@gmail.com, murshid.hassen@gmail.com", // list of receivers
+      subject: "For Investments ✔", // Subject line
+      text: `${nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation}`, // plain text body
+      html: `<b>For Investments ${nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation} </b>`, // html body
+    });
+  
+    console.log("Message sent: %s", info.messageId);
+    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+}
+ 
 
-app.use(allowCrossDomain)
-app.use(cors())
+// var transport = nodemailer.createTransport({
+//     host: "smtp.gmail.com",
+//     port: 465,
+//     secure: true,
+//     logger: true,
+//     debug: true,
+//     //ignoreTLS: true, // add this 
+//     auth: {
+//       user: "projectvimo@gmail.com",
+//       pass: "mmwwyficjykysyyn"
+//     }
+// });
 
-var transport = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 25,
-    auth: {
-      user: "139eb1e51b1bec",
-      pass: "7bed62b9521610"
-    }
-});
+// var transporter = nodemailer.createTransport(transport)
 
-
-var transporter = nodemailer.createTransport(transport)
-
-transporter.verify((error, success) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log(success)
-        console.log('Server is ready to take messages');
-    }
-});
+// transporter.verify((error, success) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(success)
+//         console.log('Server is ready to take messages');
+//     }
+// });
 
 router.post('/demo', (req, res, next) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.schoolClubName
-    console.log(message)
-    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+    
 
-    var mail = {
-        from: "murshid.hassen@gmail.com",
-        to: "murshid.hassen@gmail.com",  // Change to email address that you want to receive messages on
-        subject: 'New Message from Contact Form',
-        text: content
+    let schoolClubName = req.body.schoolClubName
+    let division = req.body.division
+    let nameoftheCoach = req.body.nameoftheCoach
+    let districtName = req.body.districtName
+    let contactNumber = req.body.contactNumber
+
+
+    console.log(schoolClubName, division, nameoftheCoach, districtName, contactNumber)
+
+
+    if(schoolClubName && division && nameoftheCoach && contactNumber && districtName){
+        demo(schoolClubName, division, nameoftheCoach,contactNumber,districtName).catch(console.error);
+        res.json({
+            status: 'success'
+        })
+    }else{
+        console.log("Error in transporter ", err)
+        res.json({
+            status: 'fail'
+        })
     }
-
-    transporter.sendMail(mail, (err, data) => {
-        if (err) {
-            console.log("Error in transporter ", err)
-            res.json({
-                status: 'fail'
-            })
-        } else {
-            res.json({
-                status: 'success'
-            })
-        }
-    })
 })
-
 
 router.post('/investment', (req, res, next) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+    
+    let nameofInvestor = req.body.nameofInvestor
+    let belongingInstitution = req.body.belongingInstitution
+    let investorContactNumber = req.body.investorContactNumber
+    let requiredInformation = req.body.requiredInformation
 
-    var mail = {
-        from: name,
-        to: 'RECEIVING_EMAIL_ADDRESS_GOES_HERE',  // Change to email address that you want to receive messages on
-        subject: 'New Message from Contact Form',
-        text: content
+    console.log(nameofInvestor, belongingInstitution, investorContactNumber, requiredInformation)
+
+
+    if(nameofInvestor && belongingInstitution && investorContactNumber && requiredInformation){
+        investor(nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation).catch(console.error);
+        res.json({
+            status: 'success'
+        })
+
+    }else{
+        console.log("Error in transporter ", err)
+        res.json({
+            status: 'fail'
+        })
     }
-
-    transporter.sendMail(mail, (err, data) => {
-        if (err) {
-            res.json({
-                status: 'fail'
-            })
-        } else {
-            res.json({
-                status: 'success'
-            })
-        }
-    })
 })
 
-
-
-
+app.use(cors())
 app.use(express.json())
-app.use('/', router)
+app.use(router);
 
-express()
+app
   .use(express.static(path.join(__dirname, 'build')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
@@ -138,3 +189,6 @@ express()
 
 
 
+  
+ 
+  

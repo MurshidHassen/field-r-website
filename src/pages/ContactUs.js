@@ -85,13 +85,26 @@ export default class ContactUs extends Component {
         this.setState({ requiredInformation: event.target.value })
     }
 
+    cancelCourse = () => { 
+        this.setState({
+            schoolClubName: '',
+            division: '',
+            nameoftheCoach: '',
+            districtName: '',
+            contactNumber: '',
+            nameofInvestor: '',
+            belongingInstitution: '',
+            investorContactNumber: '',
+            requiredInformation: ''
+        });
+      }
 
     demoRequest(e) {
         e.preventDefault();
         console.log("State values ", this.state.schoolClubName)
         alert(this.state.schoolClubName)
 
-        fetch('https://fieldr-backend.herokuapp.com/demo', {
+        fetch('http://localhost:5000/demo', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
@@ -103,7 +116,7 @@ export default class ContactUs extends Component {
         ).then((response) => {
             if (response.status === 'success') {
                 alert("Message Sent.");
-                this.resetForm()
+                this.cancelCourse();
             } else if (response.status === 'fail') {
                 alert("Message failed to send.")
             }
@@ -117,7 +130,7 @@ export default class ContactUs extends Component {
         alert("for investment ")
         console.log(this.state.nameofInvestor);
 
-        fetch('http://localhost:3002/investment', {
+        fetch('http://localhost:5000/investment', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
@@ -129,7 +142,7 @@ export default class ContactUs extends Component {
         ).then((response) => {
             if (response.status === 'success') {
                 alert("Message Sent.");
-                this.resetForm()
+                this.cancelCourse()
             } else if (response.status === 'fail') {
                 alert("Message failed to send.")
             }
