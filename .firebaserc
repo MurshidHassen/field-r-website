@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "swift-drop-package"
+    "default": "fieldr-af894",
+    "test": "fieldr-af894"
   }
 }
