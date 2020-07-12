@@ -104,7 +104,7 @@ export default class ContactUs extends Component {
         console.log("State values ", this.state.schoolClubName)
         alert(this.state.schoolClubName)
 
-        fetch('http://localhost:5000/demo', {
+        fetch('https://fieldr-backend.herokuapp.com/demo', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
@@ -130,7 +130,7 @@ export default class ContactUs extends Component {
         alert("for investment ")
         console.log(this.state.nameofInvestor);
 
-        fetch('http://localhost:5000/investment', {
+        fetch('https://fieldr-backend.herokuapp.com/investment', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
