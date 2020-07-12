@@ -130,6 +130,8 @@ export default class ContactUs extends Component {
         alert("for investment ")
         console.log(this.state.nameofInvestor);
 
+        //https://fieldr-backend.herokuapp.com
+
         fetch('https://fieldr-backend.herokuapp.com/investment', {
             method: "POST",
             body: JSON.stringify(this.state),
@@ -148,10 +150,6 @@ export default class ContactUs extends Component {
             }
         })
     }
-
-
-
-
 
 
 

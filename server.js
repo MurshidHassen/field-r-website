@@ -39,20 +39,33 @@ const PORT = process.env.PORT || 5000
     let testAccount = await nodemailer.createTestAccount();
   
     // create reusable transporter object using the default SMTP transport
+    // let transporter = nodemailer.createTransport({
+    //   host: "smtp.gmail.com",
+    //   port: 465,
+    //   secure: true, // true for 465, false for other ports
+    //   auth: {
+    //     user: "projectvimo@gmail.com", // generated ethereal user
+    //     pass: "", // generated ethereal password
+    //   },
+    // });
+
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      host: "server.fieldr.lk",
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      ignoreTLS : false,
+      requireTLS: true,
+      tls: true,
       auth: {
-        user: "projectvimo@gmail.com", // generated ethereal user
-        pass: "", // generated ethereal password
+        user: "contactus@fieldr.lk", // generated ethereal user
+        pass: "FieldR@2", // generated ethereal password
       },
     });
-  
+
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Field R 👻" <projectvimo@gmail.com>', // sender address
-      to: "projectvimo@gmail.com, murshid.hassen@gmail.com", // list of receivers
+      from: '"Field R 👻" <contactus@fieldr.lk>', // sender address
+      to: "contactus@fieldr.lk, thariq@fieldr.lk, murshid.hassen@gmail.com", // list of receivers
       subject: "For Demo Request", // Subject line
       text: `${schoolClubName + division + nameoftheCoach + contactNumber + districtName}`, // plain text body
       html: `<b>Demo Request ${schoolClubName + division + nameoftheCoach + contactNumber + districtName} </b>`, // html body
@@ -73,19 +86,22 @@ async function investor(nameofInvestor, belongingInstitution,investorContactNumb
   
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      host: "server.fieldr.lk",
+      port: 587,
+      secure: false, // true for 465, false for other ports
+      ignoreTLS : false,
+      requireTLS: true,
+      tls: true,
       auth: {
-        user: "projectvimo@gmail.com", // generated ethereal user
-        pass: "", // generated ethereal password
+        user: "contactus@fieldr.lk", // generated ethereal user
+        pass: "FieldR@2", // generated ethereal password
       },
     });
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Field R 👻" <projectvimo@gmail.com>', // sender address
-      to: "projectvimo@gmail.com, murshid.hassen@gmail.com", // list of receivers
+      from: '"Field R 👻" <contactus@fieldr.lk>', // sender address
+      to: "contactus@fieldr.lk, thariq@fieldr.lk, murshid.hassen@gmail.com", // list of receivers
       subject: "For Investments ✔", // Subject line
       text: `${nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation}`, // plain text body
       html: `<b>For Investments ${nameofInvestor, belongingInstitution,investorContactNumber, requiredInformation} </b>`, // html body
