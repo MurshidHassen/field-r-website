@@ -91,7 +91,7 @@ export default class ContactUs extends Component {
         console.log("State values ", this.state.schoolClubName)
         alert(this.state.schoolClubName)
 
-        fetch('/demo', {
+        fetch('https://fieldr-backend.herokuapp.com/demo', {
             method: "POST",
             body: JSON.stringify(this.state),
             headers: {
