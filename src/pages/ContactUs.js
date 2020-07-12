@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FieldRNavbar from '../components/FieldRNavbar'
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { DemoModel } from "../models/DemoModel";
 import { InvestorModel } from "../models/InvestorModel";
 
